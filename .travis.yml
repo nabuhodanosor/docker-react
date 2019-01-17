@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t ygrinman/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run ygrinman/docker-react npm run test -- --coverage
